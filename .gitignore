@@ -1,6 +1,8 @@
 #personalized files
 paper.pdf
 paper
+output.md
+sample.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

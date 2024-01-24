@@ -1,7 +1,11 @@
 from autoocr import AutoOCR
 
-oa = AutoOCR(lang='bangla') 
-oa.set_datapath('/usr/share/tesseract-ocr/5/tessdata')
+# oa = AutoOCR(lang='bangla') 
+# oa.set_datapath('/usr/share/tesseract-ocr/5/tessdata')
+
+oa = AutoOCR(lang='Bengali') 
+oa.set_datapath('/usr/bin/tesseract')
+
 
 def getText(image_path):
     text = oa.get_text(image_path)
@@ -15,7 +19,7 @@ def append_to_markdown(file_path, text):
         print(f'Error appending text to {file_path}: {e}')
 
 
-markdown_file_path = 'output.md'
-text_to_append = (getText('sample.png'))
+# markdown_file_path = 'output.md'
+# text_to_append = (getText('sample.png'))
 
-append_to_markdown(markdown_file_path, text_to_append)
+# append_to_markdown(markdown_file_path, text_to_append)

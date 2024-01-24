@@ -16,10 +16,11 @@ def convert_pdf_to_images(input_file, output_directory, dpi=300):
         page = np.array(page)
         page = extractParagraphsFromImage(page)
         page = Image.fromarray(page)
+        # TODO: make len(count) == len(pages) so alphabetical sort works
         image_path = os.path.join(output_directory, f'page{count}.png')
         page.save(image_path, 'PNG')
 
     print(f"Conversion completed. Images saved in '{output_directory}'")
 
 # Example usage:
-convert_pdf_to_images('paper.pdf', 'paper', 100)
+# convert_pdf_to_images('paper.pdf', 'paper', 100)
